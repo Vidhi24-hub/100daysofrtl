@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module tb_demux();
-parameter n=3'd4; //Number of select lines
-parameter m=2**n; // to figure out width of output
+parameter n=3'd4; //number of select lines
+parameter m=2**n; //number of output lines
 reg in; 
 reg [n-1:0] sel;
 wire [m-1:0] out;
