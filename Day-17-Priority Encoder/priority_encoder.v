@@ -7,24 +7,19 @@ output reg a,b,c;
 always@(*)
 begin
 
-if(d7==1)
-begin a=1; b=1; c=1; end
-else if(d6==1)
-begin a=1; b=1; c=0; end
-else if(d5==1)
-begin a=1; b=0; c=1; end
-else if(d4==1)
-begin a=1; b=0; c=0; end
-else if(d3==1)
-begin a=0; b=1; c=1; end
-else if(d2==1)
-begin a=0; b=1; c=0; end
-else if(d1==1)
-begin a=0; b=0; c=1; end
-else if(d0==1)
-begin a=0; b=0; c=0; end
-else
-begin a=1'bz; b=1'bz; c=1'bz; end
+ casex({d7,d6,d5,d4,d3,d2,d1,d0})
+    
+    8'b0000_0001 : {a,b,c}=3'd0;
+    8'b0000_001x : {a,b,c}=3'd1;
+    8'b0000_01xx : {a,b,c}=3'd2;
+    8'b0000_1xxx : {a,b,c}=3'd3;
+    8'b0001_xxxx : {a,b,c}=3'd4;
+    8'b001x_xxxx : {a,b,c}=3'd5;
+    8'b01xx_xxxx : {a,b,c}=3'd6;
+    8'b1xxx_xxxx : {a,b,c}=3'd7;
+    default      : {a,b,c} = 3'bxxx;
+   
+  endcase
 
 end
 endmodule
