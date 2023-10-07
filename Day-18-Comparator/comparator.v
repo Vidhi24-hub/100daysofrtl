@@ -10,12 +10,16 @@ begin
 
 if(a>b)
 begin a_greater_b=1; a_less_b=0; a_equal_b=0; end
+  
 else if(a<b)
 begin a_greater_b=0; a_less_b=1; a_equal_b=0; end
+  
 else if(a==b)
 begin a_greater_b=0; a_less_b=0; a_equal_b=1; end
+  
 else
 begin a_greater_b=1'bz; a_less_b=1'bz; a_equal_b=1'bz; end
+  
 end
 
 endmodule
