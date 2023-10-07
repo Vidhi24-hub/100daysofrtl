@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module comparator(a,b,a_greater_b,a_less_b,a_equal_b);
-parameter n=4; //width of inputs
+parameter n=4; //width of input
 input [n-1:0] a,b;
 output reg a_greater_b,a_less_b,a_equal_b;
 
