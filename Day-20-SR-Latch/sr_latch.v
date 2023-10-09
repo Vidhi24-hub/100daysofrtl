@@ -1,6 +1,7 @@
 module sr_latch(s,r,en,rst,q,q_bar);
 input s,r,en,rst;
 output reg q,q_bar;
+	
 always @ (*)
 begin
     
@@ -20,6 +21,5 @@ begin
 	    endcase
    end
 end
-
-
+	
 endmodule
