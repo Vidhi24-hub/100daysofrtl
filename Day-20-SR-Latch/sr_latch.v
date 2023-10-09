@@ -12,7 +12,7 @@ begin
    else if(en) 
    begin
    
-	    case({s,r})
+	
 	    case({j,k})       
 		 2'b00 : begin q<=q; q_bar<=q_bar; end
 		 2'b01 : begin q<=0; q_bar<=1; end
