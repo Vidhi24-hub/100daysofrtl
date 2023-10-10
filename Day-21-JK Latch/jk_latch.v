@@ -23,24 +23,5 @@ begin
 		 
    end
 end
-/*
-//wire w1,w2;
-//reg w1,w2;
-and a1(w1,q_bar,j);
-and a2(w2,q,k);
-nor n1(q,w1,q_bar);
-nor n2(q_bar,w2,q);
-always@(*) begin
-if(rst)
-begin q=0; q_bar=1; end 
-else if(en) begin
 
-w1=j&q_bar;
-w2=k&q;
-q=~(w1|q_bar);
-q_bar=~(w2|q);
-
-end
-end
-*/
 endmodule
