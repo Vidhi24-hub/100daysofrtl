@@ -1,7 +1,6 @@
 module jk_latch(j,k,en,rst,q,q_bar);
 input j,k,en,rst;
 output reg q,q_bar;
-//output q,q_bar;
 always @ (*)
 begin
     
