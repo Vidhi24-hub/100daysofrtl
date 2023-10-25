@@ -5,7 +5,7 @@ input d,clk,rst;
 output reg q;
 output q_bar;
 
-always@(posedge clk or rst)
+always@(posedge clk or posedge rst)
 begin
 
 if(rst)
