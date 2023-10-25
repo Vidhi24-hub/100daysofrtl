@@ -6,7 +6,7 @@ output reg q;
 output q_bar;
 
 assign q_bar = ~q;
-always@(posedge clk or posedge rst)
+always@(posedge clk or rst)
 begin
 
 if(rst)
