@@ -1,18 +1,13 @@
-module sync_series_carry_counter(clk,rst,out);
-  input clk,rst;
+module sync_series_carry_counter(clk,out);
+  input clk;
   output reg [3:0] out;
   wire a1,a2;
   
   assign a1 = out[0] & out[1];
   assign a2 = a1 & out[2];
   
-  always@(posedge clk or posedge rst)
-    begin
-	 
-    if(rst)
-      out <= 0;
-		
-      else 
+  always@(posedge clk)
+  
         begin
           out[0] <= ~out[0];
           
@@ -24,7 +19,7 @@ module sync_series_carry_counter(clk,rst,out);
 				
           if(a2)
             out[3] <= ~out[3];
-      end
+      
 		
   end
   
