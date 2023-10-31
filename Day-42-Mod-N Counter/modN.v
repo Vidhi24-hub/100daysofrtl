@@ -10,7 +10,7 @@ module modN(clk,rst,out);
       if(rst)
         out <= 0;
 
-      else if(out==n)
+      else if(out==n-1)
         out <= 0;
 
       else 
