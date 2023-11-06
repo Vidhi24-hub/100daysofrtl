@@ -2,7 +2,7 @@ module array_multiplier(a,b,mul);
   input [3:0] a,b;
   output [7:0] mul;
   
-  wire h1_s1,h2_s2,h3_s3,h4_s4,
+  wire h_s1,h_s2,h_s3,h_s4,
   	   h1_c1,h2_c2,h3_c3,h4_c4,
        f_s1,f_s2,f_s3,f_s4,f_s5,f_s6,f_s7,f_s8,
   	   f_c1,f_c2,f_c3,f_c4,f_c5,f_c6,f_c7,f_c8;
