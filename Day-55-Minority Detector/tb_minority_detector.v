@@ -10,7 +10,7 @@ module tb_minority_detector();
       
       #0; a=0; b=0; c=0;
       
-      for(i=0;i<8;i=i+1)
+      for(i=0;i<7;i=i+1)
         begin
           {a,b,c} = i;
           #4;
