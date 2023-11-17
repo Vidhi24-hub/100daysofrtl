@@ -8,24 +8,12 @@ module factorial(in,out);
   
   always@(*)
     begin
-     
-      if(in==1)
-        fact=1;
-      
-      else 
-        begin
-
-          fact=in;
-
-          for(i=1;i<in;i=i+1)
-            begin
-              fact=fact*i;
-            end
-
-        end
-      
+    for(i=1;i<in;i=i+1)
+      begin
+      fact=fact*i;
+      end
     end
-  
+       
   assign out=fact;
   
 endmodule
