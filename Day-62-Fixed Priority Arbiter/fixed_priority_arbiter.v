@@ -5,6 +5,7 @@ module fixed_priority_arbiter(req,clk,rst,gnt);
   
   always@(posedge clk or posedge rst)
     begin
+      
       if(rst)
         gnt <= 0;
       
