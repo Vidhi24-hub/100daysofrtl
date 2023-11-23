@@ -1,11 +1,11 @@
-module tb_fifo();
+module tb_async_fifo();
   reg [7:0] in; 
   reg clk,clk2,rst,wt_en,rd_en; //wt_en is write enable and rd_en is read enable
   wire [7:0] out; 
   wire [6:0] counter;
   wire empty,full; 
 
-  fifo dut(in,wt_en,rd_en,clk,clk2,rst,out,counter,empty,full);
+  async_fifo dut(in,wt_en,rd_en,clk,clk2,rst,out,counter,empty,full);
   
   always #2 clk=~clk;
   always #3 clk2=~clk2;
