@@ -1,4 +1,4 @@
-module fifo(in,wt_en,rd_en,clk1,clk2,rst,out,counter,empty,full);
+module async_fifo(in,wt_en,rd_en,clk1,clk2,rst,out,counter,empty,full);
   input [7:0] in; //8 bits input of FIFO
   input clk1,clk2,rst; //clk1 is for write part and clk2 is for read part
   input wt_en,rd_en; //wt_en is write enable and rd_en is read enable
@@ -103,7 +103,7 @@ module fifo(in,wt_en,rd_en,clk1,clk2,rst,out,counter,empty,full);
         counter <= counter;
     end
   
-  //for empty and full indication
+  //for flag indication: empty and full flag
   
   always@(counter)
     begin
