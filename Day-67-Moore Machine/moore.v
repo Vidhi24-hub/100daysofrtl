@@ -1,4 +1,4 @@
-module moore(in,clk,rst,out); //basic mealy code
+module moore(in,clk,rst,out); //basic moore code
   input in,clk,rst;
   output reg out;
   
