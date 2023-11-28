@@ -3,7 +3,7 @@ module mealy_overlapping(in,clk,rst,out); //1101 sequence detector
   output reg out;
   
   reg [1:0] state;
-  parameter S0=0, S1=1, S11=2, S110=3; /*S0 is reset state, S1 is taken from MSB of 1101, similarly S11 taken from 11 of 1101 and lastly S110 is taken as 110 from 1101.*/
+  parameter S0=0, S1=1, S11=2, S110=3; /*S0 is reset state, S1 is taken from MSB of 1101, similarly S11 taken as 11 of 1101 and lastly S110 is taken as 110 from 1101.*/
   
   always@(posedge clk)
     begin
