@@ -2,7 +2,6 @@ module moore_overlapping(in,clk,rst,out); //1011 sequence
   input in,clk,rst;
   output reg out;
   
-  
   reg [2:0] presentstate, nextstate;
   parameter S0=0, S1=1, S10=2, S101=3, S1011=4;
   
