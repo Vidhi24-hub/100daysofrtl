@@ -2,8 +2,6 @@ module moore_non_overlapping(in,clk,rst,out); //1011 sequence
   input in,clk,rst;
   output reg out;
   
-  //reg comb_out, seq_out;
-  
   reg [2:0] presentstate, nextstate;
   parameter S0=0, S1=1, S10=2, S101=3, S1011=4;
   
@@ -53,7 +51,7 @@ module moore_non_overlapping(in,clk,rst,out); //1011 sequence
           end
         default : 
           begin
-            out = 1'bz;
+            out = 1'bx;
             nextstate = S0;
           end
       endcase
