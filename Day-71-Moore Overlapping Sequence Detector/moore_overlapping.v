@@ -51,7 +51,7 @@ module moore_overlapping(in,clk,rst,out); //1011 sequence
           end
         default : 
           begin
-            out = 1'bz;
+            out = 1'bx;
             nextstate = S0;
           end
       endcase
