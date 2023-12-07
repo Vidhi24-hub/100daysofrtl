@@ -1,7 +1,7 @@
 module tb_datatype_string;
   string s1 = "VLSI Enthuasianst";
   string s2 = {"Hello", " ", s1};
-  bit [31:0] num = 78;
+  bit [31:0] num = 79;
   string s3 = num;
   
   initial begin
