@@ -7,7 +7,7 @@ module tb_datatype_string;
   initial begin
     
     $display("String : %s",s2);
-    $display("Today is my %0d th day of 100daysofrtl",s3);
+    $display("Today is my %0d th day of #100daysofrtl challenge",s3);
     
   end
 endmodule
