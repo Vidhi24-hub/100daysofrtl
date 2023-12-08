@@ -1,0 +1,41 @@
+module tb_dataype_enum;
+  
+  //one=0, two=1, three=2, four=3, five=4
+  typedef enum {one,two,three,four,five} numbers;
+  
+  //Book0=5, Book1=6, Book2=7
+  typedef enum {Book[3]=5} books;
+  
+  initial begin
+    
+    numbers number;
+    books book;
+    
+    number = four;
+    book = Book2;
+    
+    
+    $display("Number : %s", number);
+    
+    $display("The next elemnt in numbers: %s", number.next);  //next element from four in numbers
+    
+    $display("Total elements in numbers :%d", number.num); //total elements in numbers
+    
+    $display("The number of last element in numbers : %d", number.last); //number of last element in numbers 
+    
+    $display("Book : %s", book);
+    
+    $display("Previous elemtns in book : %s", book.prev); //previous element from Book2 in books
+    
+    $display("The number of first element in book :%d", book.first); //number of first element in books 
+    
+    $display("Total elements in book :%d", book.num); //total elements in books
+    
+  end
+endmodule
+    
+  
+  
+
+
+
