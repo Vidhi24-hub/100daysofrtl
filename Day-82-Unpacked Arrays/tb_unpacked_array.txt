@@ -1,0 +1,23 @@
+module tb_unpacked_arrays; 
+  
+  byte data [4][2]; //4 rows, 2 cols
+  
+  initial begin
+    
+    foreach(data[i])
+          begin
+            foreach(data[j]) 
+              begin
+               data[i][j]=$random;
+                $display("data[%0d][%0d]=%0d",i,j,data[i][j]);
+            end
+          end
+    
+    //display data
+    $display("data=%p",data);
+    
+    //display given index
+    $display("data[0][1]=%0d",data[0][1]);
+    
+  end
+endmodule
