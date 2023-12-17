@@ -29,7 +29,7 @@ module tb_fork_join;
  
   //automatic task to print statement
   task automatic statement(int t, string t_name);
-    #t $display("[%0t] ns %s", $time,t_name);
+    #t $display("[%0t] %s", $time,t_name);
   endtask      
       
 endmodule
