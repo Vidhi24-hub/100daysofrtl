@@ -19,7 +19,7 @@ module tb_fork_join;
     end
     
     //Thread 3
-      statement(25,"Thread 3");
+    statement(25,"Thread 3");
       
     join
     
