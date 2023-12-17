@@ -23,7 +23,7 @@ module tb_fork_join;
       
     join
     
-    statement($time,"Ending of Fork-Join");
+    $display("[%0t] Ending of Fork-Join",$time);
     
   end
  
